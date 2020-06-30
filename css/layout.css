@@ -1,2 +1,7 @@
 @charset "utf-8";
 
+/* header */
+.header{position: fixed; box-sizing: border-box; width: 100%; top: 0; left: 0;  padding: 0 50px; 	}
+.header .logo{float: left; }
+.header .gnb{float: right;}
+.header .gnb > li{float: left; }
