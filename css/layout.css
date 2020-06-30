@@ -5,3 +5,6 @@
 .header .logo{float: left; }
 .header .gnb{float: right;}
 .header .gnb > li{float: left; }
+.header .gnb > li > a
+
+.main_cont{box-sizing: border-box; padding-top: 80px; background: url(../img/mv.jpg) center no-repeat; background-size: cover; height: 100%;}
