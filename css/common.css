@@ -71,5 +71,3 @@ button::-moz-focus-inner,
 input::-moz-focus-inner {border: 0;padding: 0;}
 textarea {overflow: auto; /* 1 */vertical-align: top; /* 2 */ resize: vertical;}
 fieldset {border: 0;margin: 0;padding: 0;}
-
-h1{font-size: 15px;	}
