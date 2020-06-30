@@ -18,8 +18,8 @@ figure, figcaption, footer, header, hgroup,
 menu, nav, output, ruby, section, summary,
 time, mark, audio, video { margin: 0;padding: 0;border: 0;font-size: 100%;font: inherit;vertical-align: baseline;}
 
-body {line-height: 1;}
-html {font-size: 100%; /* 1 */-webkit-text-size-adjust: 100%; /* 2 */-ms-text-size-adjust: 100%; /* 2 */}
+body {line-height: 1; font-family: 'S-CoreDream-5Medium';}
+html {font-size: 100%; /* 1 */-webkit-text-size-adjust: 100%; /* 2 */-ms-text-size-adjust: 100%; /* 2 */ font-family: 'S-CoreDream-5Medium';;}
 
 /* make sure to set some focus styles for accessibility */
 :focus {outline: 0;}
@@ -44,6 +44,8 @@ textarea {overflow: auto;vertical-align: top;resize: vertical;}
 audio,canvas,video {display: inline-block;*display: inline;*zoom: 1;max-width: 100%;}
 audio:not([controls]) {display: none;height: 0;}
 [hidden] {display: none;}
+
+a{text-decoration: none;}
 a:focus {outline: thin dotted;}
 a:active,a:hover {outline: 0;}
 
@@ -75,3 +77,8 @@ fieldset {border: 0;margin: 0;padding: 0;}
 /* ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- */
 
 .clear:after{display: block; content: ''; clear: both;}
+
+/* À¥ÆùÆ® */
+
+@font-face { font-family: 'S-CoreDream-5Medium'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); font-weight: normal; font-style: normal; }
+
