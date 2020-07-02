@@ -3,7 +3,7 @@
 /* mvt */
 .main_cont{}
 .main_cont > article{position: relative; box-sizing: border-box; height: 100vh; }
-.mv{padding-top: 80px; background: url(../img/mv.jpg) center no-repeat; background-attachment: fixed;	}
+.mv{padding-top: 80px; background: url(../img/mv.jpg) center -50px no-repeat; background-attachment: fixed;	}
 
 .mv .mv_txt{position: absolute; display: inline-block; box-sizing: border-box; padding: 30px 50px; left: 50%; top: 300px; transform:translate(-50%, 0); transition:.3s; }
 .mv .mv_txt:before{position: absolute; content:''; width: 100%; height: 3px; background: #fff;  left: 0; top: 0;}
@@ -17,11 +17,38 @@
 .mv .mv_txt h3 b:before{position: absolute; content:''; width: 100%; height: 8px; background: #faff7b; opacity: 0.7; left: 0%; bottom: 0; z-index: -1;}
 .mv .mv_txt h2{font-size: 22px; line-height: 1.7; }
 .mv .mv_txt .r_ty1{position: absolute; left: 103%; top: 0; width: 110px;} 
-.mv .mv_txt .r_ty1 span{display: block; float: left; width: 3px; height: 110px; background: #fff; margin-right: 10px; margin-top: 15px;}
+.mv .mv_txt .r_ty1 span{display: block; float: left; width: 3px; height: 110px; background: #fff; margin-right: 10px; margin-top: 15px; }
 .mv .mv_txt .r_ty1 span.r2{height: 80px; margin-top: 25px;}
 .mv .mv_txt .r_ty1 span.r3{height: 60px; margin-top: 35px;}
-
 .mv .mv_txt .b_ty1{position: absolute; right: 0; bottom: -55px;  width: 110px;}
 .mv .mv_txt .b_ty1 span{display: block;  width: 110px; height: 3px; background: #fff; margin: 0 auto; margin-top: 15px; }
 .mv .mv_txt .b_ty1 span.b2{width: 80px; }
 .mv .mv_txt .b_ty1 span.b3{width: 60px; }
+
+.scroll_i{position: absolute; display: block; left: 50%; bottom: 0px; color: #fff; font-size: 18px; padding-bottom: 50px; }
+.scroll_i:before{position: absolute; content:''; width: 2px; height: 30px; background: #fff; left: 50%; margin-left: -1px; bottom: 0;}
+.scroll_i span{position: relative; animation: 4.5s ease 0s infinite normal none running; animation-name:scroll_i; top: 0;}
+@keyframes scroll_i {0% {top: 0;} 50% {top: 15px;} 100% {top: 0;} }
+
+
+/* ÁÂÃø ÇÁ·ÎÇÊ */
+.profile{position: fixed; box-sizing: border-box; padding: 35px; width: 637px; left: -637px; top: 50%; transform:translate(0, -50%); z-index: 108; background: rgba(255,255,255,0.5); border-radius: 25px;}
+.profile .right_bt{position: absolute; display: block; right: -30px; top: 50%; margin-top: -50px; width: 30px; height: 100px; background: rgba(255,255,255,0.9); border-radius: 0px 8px 8px 0; cursor: pointer; transition:.3s;}
+.profile .right_bt i{display: block; transform:rotate(90deg); font-size: 18px; letter-spacing: 0.12em; padding-left: 12px; transition:.3s;}
+.profile .right_bt:hover{background: rgba(0,0,0,0.8);}
+.profile .right_bt:hover i{letter-spacing: 0.15em; padding-left: 10px; color: #fff;}
+
+.profile .wrap{display: table; table-layout: fixed;}
+.profile .wrap > figure{display: table-cell; box-sizing: border-box; padding-right: 40px; vertical-align: middle;}
+.profile .wrap > div{display: table-cell; vertical-align: middle;}
+.profile .wrap > div ol li{line-height: 1.7;}
+.profile .wrap > div ol li span{display: inline-block; font-size: 18px; width: 80px;}
+.profile .wrap > div ol li b{position: relative; display: inline-block; font-size: 14px;  font-weight: 400; padding-left: 10px; padding-right: 20px;}
+.profile .wrap > div ol li b:after{position: absolute; content:''; width: 1px; height: 12px; background: #000; right: 10px; top: 0.45em;}
+.profile .wrap > div ol li i{display: inline-block; color: #333; font-size: 14px; }
+.profile .wrap > div ol li.last_li{font-size: 14px; color: #333;}
+
+
+
+.profile .right_bt{}
+.profile figure img{width: 200px;}
