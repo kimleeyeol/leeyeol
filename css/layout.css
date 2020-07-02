@@ -3,13 +3,15 @@
 /* header */
 .header{position: fixed; box-sizing: border-box; width: 100%; top: 0; left: 0;  padding: 0 50px; height: 100px; z-index: 105;}
 .header .logo{float: left; padding-top: 20px;}
-.header .logo a{position: relative; box-sizing: border-box; display: block; width: 80px; height: 80px; border: 3px solid #fff; } 
-.header .logo a img{position: absolute; left: 50%; top: 50%; transform:translate(-50%, -50%); transition:.3s; display: none;}
+.header .logo a{position: relative; box-sizing: border-box; display: block; width: 80px; height: 80px;}
+.header .logo a:before{position: absolute; content:''; width: 80px; height: 80px; left: 0; top: 0; box-sizing: border-box; border: 3px solid #fff; animation: 4.5s ease 0s infinite normal none running; animation-name:logo_move;}
+@keyframes logo_move {0% {transform:rotate(0deg)} 25% {transform:rotate(90deg) } 50% {transform:rotate(180deg)} 75% {transform:rotate(270deg)} 100% {transform:rotate(360deg)}}
+ 
+.header .logo a img{position: absolute; box-sizing: border-box; left: 50%; top: 50%; transform:translate(-50%, -50%); transition:.3s; display: none; }
 .header .logo a img.logo_1{display: block;}
+
 .header .gnb{float: right; padding-top: 20px;}
 .header .gnb > li{float: left; }
 .header .gnb > li > a{font-size: 22px; line-height: 80px; color: #fff; box-sizing: border-box; padding: 0 30px; transition:color .3s; }
 .header .gnb > li:hover > a{color: #faff7b;}
-
-
 
