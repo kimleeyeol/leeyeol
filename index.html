@@ -1,13 +1,13 @@
 
-<html lang="en">
+<html lang="kor">
  <head>
 	<meta charset="UTF-8">
 	<title>Leeyeol's PortFolio!!</title>
 <!-- css -->
 	<link rel="stylesheet" href="css/common.css">
 <!-- js -->
+	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
 	<!-- <script src="leeyeol/js/common.js"></script> -->
- 
  </head>					
  <body>					
  	<header class="header">
@@ -26,7 +26,20 @@
 			</ul>
 		</nav>
 	</header>
-
+	<aside class="profile">
+			<span class="right_bt"><i>PROFILE</i></span>
+			<div class="wrap clear">
+				<figure><img src="img/my_profile.png" alt="김이열 사진"></figure>
+				<div class="tbx">
+					<ol>
+						<li><span>Name</span>김이열</li>
+						<li><span>E-mail</span>kpy456@hanmail.net</li>
+						<li><span>Career</span>(주)인피아드<b>Publisher</b><i>웹에이전시</i></li>
+						<li class="last_li"><span></span>2018.01.15 ~ 2020.06.05</li>
+					</ol>		
+				</div>
+			</div>
+		</aside>
 	<section class="main_cont">
 		<article class="mv">
 			<div class="mv_txt">
@@ -45,11 +58,22 @@
 					</div>
 				</div>
 			</div>
-			<span class="scroll_i">Scroll</span>	
+			<div class="scroll_i">
+				<span>Scroll</span>
+			</div>
 		</article>
-		<article class=""></article>
-		<article class=""></article>
-		<article class=""></article>
+		<article class="m_cnt">
+
+		</article>
+		<article class="m_cnt"></article>
+		<article class="m_cnt"></article>
 	</section>	
  </body>
 </html>
+
+
+<script>
+	$('.profile .right_bt').click(function(){
+		$(this).hasClass('on');
+	});
+</script>
