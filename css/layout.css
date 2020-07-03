@@ -13,5 +13,7 @@
 .header .gnb{float: right; padding-top: 20px;}
 .header .gnb > li{float: left; }
 .header .gnb > li > a{font-size: 22px; line-height: 80px; color: #fff; box-sizing: border-box; padding: 0 30px; transition:color .3s; }
-.header .gnb > li:hover > a{color: #faff7b;}
+
+.header .gnb > li:hover > a,
+.header .gnb > li.on > a{color: #faff7b;}
 
