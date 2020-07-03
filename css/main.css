@@ -48,7 +48,8 @@
 
 @keyframes here {0% {transform:rotate(45deg) scale(0); opacity: 0;} 30% {transform:rotate(45deg) scale(1); opacity: 1; top: -30px; left: 25px;} 100% {transform:rotate(45deg) scale(1.5); top: -40px; left: 30px;}}
 @keyframes here2 {0% {transform:rotate(135deg) scale(0); opacity: 0;} 30% {transform:rotate(135deg) scale(1); opacity: 1; bottom: -30px; left: 25px;} 100% {transform:rotate(135deg) scale(1.5); bottom: -40px; left: 30px;}}
-.profile .right_bt.here:hover span{animation-name:none;}
+.profile .right_bt.here:hover span,
+.profile.on .right_bt.here span{animation-name:none;}
 
 
 .profile .hovy_bt{position: absolute; display: block; left: 50%; margin-left: -50px; bottom: -30px; width: 100px; height: 30px; line-height: 30px; color: #000; background: rgba(255,255,255,0.5); cursor: pointer; text-align: center; border-radius: 0px 0px 8px 8px; transition:.3s;}
