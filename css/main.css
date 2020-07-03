@@ -32,13 +32,27 @@
 
 
 /* ÁÂÃø ÇÁ·ÎÇÊ */
-.profile{position: fixed; box-sizing: border-box; padding: 35px; width: 637px; left: -637px; top: 50%; transform:translate(0, -50%); z-index: 108; background: rgba(255,255,255,0.5); border-radius: 25px;}
+.profile{position: fixed; box-sizing: border-box; padding: 35px; width: 637px; left: -637px; top: 50%; transform:translate(0, -50%); z-index: 108; background: rgba(255,255,255,0.5); border-radius: 0px 25px 0px 0; transition:.8s}
 .profile .right_bt{position: absolute; display: block; right: -30px; top: 50%; margin-top: -50px; width: 30px; height: 100px; background: rgba(255,255,255,0.9); border-radius: 0px 8px 8px 0; cursor: pointer; transition:.3s;}
 .profile .right_bt i{display: block; transform:rotate(90deg); font-size: 18px; letter-spacing: 0.12em; padding-left: 12px; transition:.3s;}
 .profile .right_bt:hover{background: rgba(0,0,0,0.8);}
 .profile .right_bt:hover i{letter-spacing: 0.15em; padding-left: 10px; color: #fff;}
 
-.profile .wrap{display: table; table-layout: fixed;}
+.profile .right_bt:before{position: absolute; content:''; width: 100%; height: 100px; background: rgba(255,255,255,0.4); right: 0; top: 0; transition:.3s; opacity: 1; z-index: -1; border-radius: 0 8px 8px 0;}
+.profile .right_bt:hover:before{transform:scale(1.8); opacity: 0; z-index: -1;}
+.profile .hovy_bt{position: absolute; display: block; left: 50%; margin-left: -50px; bottom: -30px; width: 100px; height: 30px; line-height: 30px; color: #000; background: rgba(255,255,255,0.5); cursor: pointer; text-align: center; border-radius: 0px 0px 8px 8px; transition:.3s;}
+
+
+.profile .hovy_bt b{display: none;}
+.profile .hovy_bt:hover{color: #fff; background: rgba(0,0,0,0.5);}
+.profile .hovy_bt i{}
+.profile .hovy_bt b{transition:.3s;}
+.profile .hovy_bt.on{width: 100%; left: 0; margin-left: 0; background: rgba(0,0,0,0.5); color: #fff}
+.profile .hovy_bt.on i{transform:scale(0); display: none;}
+.profile .hovy_bt.on b{display: block; }
+ 
+
+.profile .wrap{display: table; table-layout: fixed; transition:.3s; }
 .profile .wrap > figure{display: table-cell; box-sizing: border-box; padding-right: 40px; vertical-align: middle;}
 .profile .wrap > div{display: table-cell; vertical-align: middle;}
 .profile .wrap > div ol li{line-height: 1.7;}
@@ -48,7 +62,14 @@
 .profile .wrap > div ol li i{display: inline-block; color: #333; font-size: 14px; }
 .profile .wrap > div ol li.last_li{font-size: 14px; color: #333;}
 
-
+.profile .wrap2{display: none; padding: 30px 0; box-sizing: border-box;}
+.profile .wrap2 h3{position: relative; font-size: 20px; margin-bottom: 15px; display: inline-block; ;}
+.profile .wrap2 h3:after{position: absolute; content:''; width: 0%; height: 8px; background: #fff; left: 0; bottom: 0; z-index: -1;  transition:.4s; transition-delay:.5s;}
+.profile .wrap2 p{font-size: 16px; line-height: 1.7;}
+.profile .wrap2 h3.on:after{width: 100%;}
 
 .profile .right_bt{}
 .profile figure img{width: 200px;}
+.profile.on{left: 0; }
+.profile.on .right_bt{background: rgba(255,255,255,0.5);}
+.profile.on .right_bt:hover{background: rgba(0,0,0,0.7);}
