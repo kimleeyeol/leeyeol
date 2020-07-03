@@ -19,7 +19,7 @@
 		</h1>
 		<nav>
 			<ul class="gnb clear">
-				<li><a href="#n" class="profile_bt">Profile</a></li>
+				<li class="profile_bt"><a href="#n">Profile</a></li>
 				<li><a href="#n">Skill</a></li>
 				<li><a href="#n">Portfolio</a></li>
 				<li><a href="#n">about</a></li>
@@ -27,7 +27,12 @@
 		</nav>
 	</header>
 	<aside class="profile">
-			<span class="right_bt"><i>PROFILE</i></span>
+			<div class="right_bt">
+				<i>PROFILE</i> 
+				<span>h e r e !</span>
+				<span class="here2">h e r e !</span>
+				</ol>
+			</div>
 			<span class="hovy_bt"><i>More</i><b>Close</b></span>
 			<div class="wrap clear">
 				<figure><img src="img/my_profile.png" alt="김이열 사진"></figure>
@@ -81,6 +86,20 @@
 
 
 <script>
+
+//gnb
+	$('.gnb > li').click(function(){
+		$('.gnb > li').removeClass('on');
+		$(this).addClass('on');
+
+		if($('.profile_bt').hasClass('on')){
+			$('.profile > .right_bt').addClass('here');			
+		}else{
+			$('.profile > .right_bt').removeClass('here');	
+		};
+	});
+
+
 	$('.profile > .right_bt').click(function(){
 		if($(this).parents('.profile').is('.on')){
 			$(this).parents('.profile').removeClass('on');
