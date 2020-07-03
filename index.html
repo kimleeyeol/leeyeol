@@ -5,9 +5,9 @@
 	<title>Leeyeol's PortFolio!!</title>
 <!-- css -->
 	<link rel="stylesheet" href="css/common.css">
+
 <!-- js -->
-	<script src="https://code.jquery.com/jquery-2.2.1.min.js"></script>
-	<!-- <script src="leeyeol/js/common.js"></script> -->
+	<script src="https://code.jquery.com/jquery-2.2.1.js"></script>
  </head>					
  <body>					
  	<header class="header">
@@ -19,7 +19,7 @@
 		</h1>
 		<nav>
 			<ul class="gnb clear">
-				<li><a href="#n">Profile</a></li>
+				<li><a href="#n" class="profile_bt">Profile</a></li>
 				<li><a href="#n">Skill</a></li>
 				<li><a href="#n">Portfolio</a></li>
 				<li><a href="#n">about</a></li>
@@ -28,6 +28,7 @@
 	</header>
 	<aside class="profile">
 			<span class="right_bt"><i>PROFILE</i></span>
+			<span class="hovy_bt"><i>More</i><b>Close</b></span>
 			<div class="wrap clear">
 				<figure><img src="img/my_profile.png" alt="김이열 사진"></figure>
 				<div class="tbx">
@@ -39,12 +40,19 @@
 					</ol>		
 				</div>
 			</div>
+			<div class="wrap2 clear">
+				<h3>안녕하세요. 퍼블리셔 김이열입니다.</h3>
+				<p>
+					여러 프로젝트를 하드코딩하며 시멘틱한 마크업과<br>
+					반응형에 효율적인 css를 고민하며 꾸준히 발전해 나가고자 합니다.</p>
+			</div>
 		</aside>
 	<section class="main_cont">
 		<article class="mv">
 			<div class="mv_txt">
 				<div class="txt_box">
 					<h3 class="mv_tit">웹 퍼블리셔 <b>김이열</b>입니다.</h3>
+					
 					<h2>Web Publisher Leeyeol</h2>
 					<div class="r_ty1">
 						<span class="r1"></span>
@@ -73,7 +81,23 @@
 
 
 <script>
-	$('.profile .right_bt').click(function(){
-		$(this).hasClass('on');
+	$('.profile > .right_bt').click(function(){
+		if($(this).parents('.profile').is('.on')){
+			$(this).parents('.profile').removeClass('on');
+		}else{
+			$(this).parents('.profile').addClass('on');
+		};
+	});
+
+	$('.profile > .hovy_bt').click(function(){
+		$('.profile > .wrap2').toggleClass('on');
+		$(this).toggleClass('on');
+		if($('.profile > .wrap2').is('.on')){
+			$('.profile > .wrap2').slideDown();
+			$('.profile > .wrap2 > h3').addClass('on').delay(700);
+		}else{
+			$('.profile > .wrap2').slideUp();
+			$('.profile > .wrap2 > h3').removeClass('on');
+		};
 	});
 </script>
