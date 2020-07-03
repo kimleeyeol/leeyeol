@@ -37,12 +37,21 @@
 .profile .right_bt i{display: block; transform:rotate(90deg); font-size: 18px; letter-spacing: 0.12em; padding-left: 12px; transition:.3s;}
 .profile .right_bt:hover{background: rgba(0,0,0,0.8);}
 .profile .right_bt:hover i{letter-spacing: 0.15em; padding-left: 10px; color: #fff;}
-
 .profile .right_bt:before{position: absolute; content:''; width: 100%; height: 100px; background: rgba(255,255,255,0.4); right: 0; top: 0; transition:.3s; opacity: 1; z-index: -1; border-radius: 0 8px 8px 0;}
 .profile .right_bt:hover:before{transform:scale(1.8); opacity: 0; z-index: -1;}
+
+.profile .right_bt span{position: absolute; display: block; width: 70px; text-align: center; left:  15px; top:  -20px; transform:rotate(45deg) scale(1); color: #fff;  transition:.3s; opacity: 0;}
+.profile .right_bt span.here2{transform:rotate(135deg) scale(0); top: auto; bottom: -20px;}
+
+.profile .right_bt.here span{animation: 1.2s ease 0s infinite normal none running; animation-name:here;}
+.profile .right_bt.here span.here2{animation: 1.2s ease .3s infinite normal none running; animation-name:here2;}
+
+@keyframes here {0% {transform:rotate(45deg) scale(0); opacity: 0;} 30% {transform:rotate(45deg) scale(1); opacity: 1; top: -30px; left: 25px;} 100% {transform:rotate(45deg) scale(1.5); top: -40px; left: 30px;}}
+@keyframes here2 {0% {transform:rotate(135deg) scale(0); opacity: 0;} 30% {transform:rotate(135deg) scale(1); opacity: 1; bottom: -30px; left: 25px;} 100% {transform:rotate(135deg) scale(1.5); bottom: -40px; left: 30px;}}
+.profile .right_bt.here:hover span{animation-name:none;}
+
+
 .profile .hovy_bt{position: absolute; display: block; left: 50%; margin-left: -50px; bottom: -30px; width: 100px; height: 30px; line-height: 30px; color: #000; background: rgba(255,255,255,0.5); cursor: pointer; text-align: center; border-radius: 0px 0px 8px 8px; transition:.3s;}
-
-
 .profile .hovy_bt b{display: none;}
 .profile .hovy_bt:hover{color: #fff; background: rgba(0,0,0,0.5);}
 .profile .hovy_bt i{}
@@ -51,9 +60,9 @@
 .profile .hovy_bt.on i{transform:scale(0); display: none;}
 .profile .hovy_bt.on b{display: block; }
  
-
 .profile .wrap{display: table; table-layout: fixed; transition:.3s; }
 .profile .wrap > figure{display: table-cell; box-sizing: border-box; padding-right: 40px; vertical-align: middle;}
+.profile .wrap > figure img{box-shadow:0px 0px 10px rgba(0,0,0,0.5); border-radius: 50%;}
 .profile .wrap > div{display: table-cell; vertical-align: middle;}
 .profile .wrap > div ol li{line-height: 1.7;}
 .profile .wrap > div ol li span{display: inline-block; font-size: 18px; width: 80px;}
