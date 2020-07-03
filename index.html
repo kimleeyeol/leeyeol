@@ -101,10 +101,14 @@
 
 
 	$('.profile > .right_bt').click(function(){
+		$('.profile > .right_bt').removeClass('here');
+		
 		if($(this).parents('.profile').is('.on')){
 			$(this).parents('.profile').removeClass('on');
+			$('.profile_bt').removeClass('on');
 		}else{
 			$(this).parents('.profile').addClass('on');
+
 		};
 	});
 
